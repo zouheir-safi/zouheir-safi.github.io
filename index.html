@@ -4,89 +4,78 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Zouheir SAFI</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
+        @import url('https://fonts.cdnfonts.com/css/corbel');
+        
+        body { 
+            font-family: 'Corbel', sans-serif; 
+            background-color: #f8f9fa;
+            color: #333;
         }
-        .hero {
-            background-color: #007bff;
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
+        .fade-in { 
+            opacity: 0; 
+            transform: translateY(20px); 
+            animation: fadeIn 1s forwards; 
         }
-        .section {
-            padding: 50px 20px;
-        }
-        .certification img {
-            width: 40px;
-            height: auto;
-            margin-left: 10px;
+        @keyframes fadeIn { 
+            to { opacity: 1; transform: translateY(0); } 
         }
     </style>
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">Portfolio - Zouheir SAFI</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="index.html">Présentation</a></li>
-                    <li class="nav-item"><a class="nav-link" href="projets.html">Projets</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
+    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="index.html" class="text-xl font-bold text-blue-600">Zouheir SAFI</a>
+            <div class="space-x-6">
+                <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm">Accueil</a>
+                <a href="projets.html" class="text-gray-700 hover:text-blue-600 text-sm">Projets</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600 text-sm">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Section Hero -->
-    <header class="hero">
-        <h1>Bienvenue, je suis Zouheir SAFI</h1>
-        <p>Administrateur Système et Réseau - Passionné par l'IT et la cybersécurité</p>
+    <!-- Hero Section -->
+    <header class="bg-blue-500 text-white text-center py-16 mt-16 fade-in">
+        <h1 class="text-3xl font-bold">Bienvenue sur mon Portfolio</h1>
+        <p class="text-md mt-2">Administrateur Système & Réseau | Passionné par l'IT & la Cybersécurité</p>
     </header>
 
-    <!-- Section Présentation -->
-    <section class="section">
-        <div class="container">
-            <h2>À propos de moi</h2>
-            <p>
-                Fort d'une expérience en <strong>QHSE</strong>, j'ai développé des compétences transférables telles que 
-                <strong>l'analyse</strong>, <strong>la résolution de problèmes</strong> et <strong>la gestion de projets</strong>, 
-                qui m'aident à aborder les défis techniques avec rigueur et méthode.
-            </p>
-            <p>
-                Titulaire d'un <strong>Bachelor en administration des systèmes, réseaux et sécurité</strong>, 
-                j'ai acquis des compétences en administration systèmes (<strong>Linux, Windows Server, Active Directory</strong>), 
-                en gestion des réseaux (<strong>TCP/IP, VLAN, DNS, DHCP</strong>) et en virtualisation (<strong>VMware, Hyper-V</strong>). 
-                Je maîtrise également des outils de support comme <strong>GLPI</strong>, ainsi que des solutions de prise en main à distance telles qu'<strong>AnyDesk</strong> et <strong>VNC</strong>.
-            </p>
-        </div>
+    <!-- À propos -->
+    <section class="container mx-auto px-6 py-10 fade-in">
+        <h2 class="text-2xl font-bold text-center text-blue-600">À propos de moi</h2>
+        <p class="text-center text-gray-700 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
+            Fort d'une expérience en <strong>QHSE</strong>, j'ai développé des compétences en 
+            <strong>analyse</strong>, <strong>résolution de problèmes</strong> et <strong>gestion de projets</strong>, 
+            me permettant d’aborder les défis techniques avec méthode.
+        </p>
+        <p class="text-center text-gray-700 mt-3 max-w-2xl mx-auto text-sm leading-relaxed">
+            Titulaire d'un <strong>Bachelor en Administration Systèmes, Réseaux et Sécurité</strong>, 
+            j’ai acquis des compétences en <strong>Linux, Windows Server, Active Directory</strong>, 
+            ainsi qu'en <strong>réseaux</strong> (TCP/IP, VLAN, DNS, DHCP) et en <strong>virtualisation</strong> (VMware, Hyper-V).
+        </p>
     </section>
 
-    <!-- Section Parcours -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2>Mon Parcours</h2>
-            <ul>
-                <li><strong>Formation :</strong> Bachelor Administrateur Systèmes, Réseaux et Sécurité</li>
-                <li class="certification">
-                    <strong>Certification :</strong> Google IT Support 
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google Logo">
-                </li>
-            </ul>
+    <!-- Parcours -->
+    <section class="bg-white py-10 fade-in">
+        <div class="container mx-auto px-6">
+            <h2 class="text-2xl font-bold text-center text-blue-600">Mon Parcours</h2>
+            <div class="max-w-2xl mx-auto mt-5 text-gray-700 text-sm leading-relaxed">
+                <p><strong>🎓 Formation :</strong> Bachelor Administrateur Systèmes, Réseaux et Sécurité</p>
+                <p class="flex items-center mt-2">
+                    <strong>📜 Certification :</strong> Google IT Support 
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="w-5 h-5 ml-2">
+                </p>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center p-4 bg-dark text-white">
+    <footer class="text-center py-4 bg-blue-600 text-white text-sm">
         &copy; 2024 Zouheir SAFI - Tous droits réservés
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
