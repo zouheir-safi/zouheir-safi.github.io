@@ -3,85 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfolio - Zouheir SAFI</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         @import url('https://fonts.cdnfonts.com/css/corbel');
 
-        body { 
-            font-family: 'Corbel', sans-serif; 
-            background-color: #f9fafb;
+        body {
+            font-family: 'Corbel', sans-serif;
+            background-color: #f8f9fa;
             color: #333;
         }
-        .fade-in { 
-            opacity: 0; 
-            transform: translateY(20px); 
-            animation: fadeIn 1s forwards; 
-        }
-        @keyframes fadeIn { 
-            to { opacity: 1; transform: translateY(0); } 
-        }
         .hero {
-            background: linear-gradient(135deg, #5a9bf6, #3a7bd5);
-            color: white;
-            padding: 80px 20px;
             text-align: center;
+            padding: 100px 20px;
         }
-        .container-custom {
-            max-width: 900px;
-            margin: auto;
+        .circle-image {
+            width: 60%;
+            border-radius: 50%;
+            display: block;
+            margin: 30px auto;
         }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-900">
+<body>
 
     <!-- Navigation -->
-    <nav class="bg-white shadow-md fixed w-full z-10 top-0">
-        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
-            <a href="index.html" class="text-xl font-bold text-blue-600">Zouheir SAFI</a>
+    <nav class="bg-white shadow-md fixed w-full top-0 z-10">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-bold text-gray-900">Zouheir SAFI</a>
             <div class="space-x-6">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600 text-sm">Accueil</a>
-                <a href="projets.html" class="text-gray-700 hover:text-blue-600 text-sm">Projets</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-600 text-sm">Contact</a>
+                <a href="index.html" class="text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="projets.html" class="text-gray-700 hover:text-blue-600">Projets</a>
+                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <header class="hero fade-in mt-16">
+    <header class="hero">
         <h1 class="text-4xl font-bold">Bienvenue sur mon Portfolio</h1>
-        <p class="text-md mt-2">Administrateur Système & Réseau | Passionné par l'IT</p>
+        <p class="text-md mt-3 text-gray-700">Administrateur Système & Réseau | Passionné par l'IT & la Cybersécurité</p>
+        <a href="#about" class="mt-6 inline-block bg-black text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition">À propos</a>
     </header>
 
+    <!-- Image Section -->
+    <div class="container mx-auto text-center">
+        <img src="images/mon-image.jpg" alt="Illustration" class="circle-image">
+    </div>
+
     <!-- À propos -->
-    <section class="container-custom px-6 py-12 fade-in bg-white shadow-md rounded-lg mt-10">
-        <h2 class="text-2xl font-bold text-center text-blue-600">À propos de moi</h2>
-        <p class="text-center text-gray-700 mt-4 text-sm leading-relaxed">
+    <section id="about" class="container mx-auto px-6 py-12 text-center">
+        <h2 class="text-3xl font-bold text-gray-900">À propos de moi</h2>
+        <p class="text-gray-700 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
             Fort d'une expérience en <strong>QHSE</strong>, j'ai développé des compétences en 
             <strong>analyse</strong>, <strong>résolution de problèmes</strong> et <strong>gestion de projets</strong>, 
             me permettant d’aborder les défis techniques avec méthode.
         </p>
-        <p class="text-center text-gray-700 mt-3 text-sm leading-relaxed">
-            Titulaire d'un <strong>Bachelor en Administration Systèmes, Réseaux et Sécurité</strong>, 
-            j’ai acquis des compétences en <strong>Linux, Windows Server, Active Directory</strong>, 
-            ainsi qu'en <strong>réseaux</strong> (TCP/IP, VLAN, DNS, DHCP) et en <strong>virtualisation</strong> (VMware, Hyper-V).
-        </p>
-    </section>
-
-    <!-- Parcours -->
-    <section class="container-custom px-6 py-12 fade-in mt-10">
-        <h2 class="text-2xl font-bold text-center text-blue-600">Mon Parcours</h2>
-        <div class="max-w-2xl mx-auto mt-5 text-gray-700 text-sm leading-relaxed">
-            <p class="flex items-center mt-2"><strong>🎓 Formation :</strong> Bachelor Administrateur Systèmes, Réseaux et Sécurité</p>
-            <p class="flex items-center mt-2">
-                <strong>📜 Certification :</strong> Google IT Support 
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="Google" class="w-5 h-5 ml-2">
-            </p>
-        </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-center py-4 bg-blue-600 text-white text-sm">
+    <footer class="text-center py-4 bg-gray-900 text-white text-sm">
         &copy; 2024 Zouheir SAFI - Tous droits réservés
     </footer>
 
