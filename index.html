@@ -14,14 +14,34 @@
             color: #333;
         }
         .hero {
-            text-align: center;
-            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 80vh;
+            gap: 50px;
+            padding: 20px;
         }
-        .circle-image {
-            width: 60%;
+        .photo-container {
+            width: 250px;
+            height: 250px;
             border-radius: 50%;
-            display: block;
-            margin: 30px auto;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        .photo-container img {
+            width: 100%;
+            height: auto;
+        }
+        .bubble {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
         }
     </style>
 </head>
@@ -29,37 +49,32 @@
 
     <!-- Navigation -->
     <nav class="bg-white shadow-md fixed w-full top-0 z-10">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-bold text-gray-900">Zouheir SAFI</a>
-            <div class="space-x-6">
-                <a href="index.html" class="text-gray-700 hover:text-blue-600">Accueil</a>
-                <a href="projets.html" class="text-gray-700 hover:text-blue-600">Projets</a>
-                <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
-            </div>
+        <div class="container mx-auto px-6 py-4 flex justify-end space-x-6">
+            <a href="index.html" class="text-gray-700 hover:text-blue-600">Accueil</a>
+            <a href="projets.html" class="text-gray-700 hover:text-blue-600">Projets</a>
+            <a href="contact.html" class="text-gray-700 hover:text-blue-600">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <header class="hero">
-        <h1 class="text-4xl font-bold">Bienvenue sur mon Portfolio</h1>
-        <p class="text-md mt-3 text-gray-700">Administrateur Système & Réseau | Passionné par l'IT & la Cybersécurité</p>
-        <a href="#about" class="mt-6 inline-block bg-black text-white px-6 py-3 rounded-lg text-sm font-medium hover:bg-gray-800 transition">À propos</a>
+        <!-- Photo Circulaire -->
+        <div class="photo-container">
+            <img src="images/GWBZ1906_circular.png" alt="Zouheir SAFI">
+        </div>
+
+        <!-- Bulle claire avec texte -->
+        <div class="bubble">
+            <p>
+                Bonjour, je suis Zouheir. Après plusieurs années d'expérience dans le domaine de la QSE, 
+                j'ai entrepris une reconversion professionnelle en 2023, validée par l'obtention d'un 
+                <strong>Bachelor Administrateur Système et Réseaux</strong>. 
+                Passionné par la résolution de problèmes et attiré par les défis techniques, 
+                j’apprécie particulièrement la diversité des missions et le contact avec les utilisateurs, 
+                qui rendent chaque journée unique et stimulante.
+            </p>
+        </div>
     </header>
-
-    <!-- Image Section -->
-    <div class="container mx-auto text-center">
-        <img src="images/mon-image.jpg" alt="Illustration" class="circle-image">
-    </div>
-
-    <!-- À propos -->
-    <section id="about" class="container mx-auto px-6 py-12 text-center">
-        <h2 class="text-3xl font-bold text-gray-900">À propos de moi</h2>
-        <p class="text-gray-700 mt-4 max-w-2xl mx-auto text-lg leading-relaxed">
-            Fort d'une expérience en <strong>QHSE</strong>, j'ai développé des compétences en 
-            <strong>analyse</strong>, <strong>résolution de problèmes</strong> et <strong>gestion de projets</strong>, 
-            me permettant d’aborder les défis techniques avec méthode.
-        </p>
-    </section>
 
     <!-- Footer -->
     <footer class="text-center py-4 bg-gray-900 text-white text-sm">
